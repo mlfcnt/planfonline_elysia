@@ -7,6 +7,9 @@
   },
   "dependencies": {
     "@elysiajs/cors": "^1.0.2",
+    "@neondatabase/serverless": "^0.9.3",
+    "drizzle-kit": "^0.21.2",
+    "drizzle-orm": "^0.30.10",
     "elysia": "latest"
   },
   "devDependencies": {

@@ -1,0 +1,39 @@
+{
+  "id": "ece18716-6ead-4207-9d54-137c66969f67",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "6",
+  "dialect": "postgresql",
+  "tables": {
+    "my_schema.users": {
+      "name": "users",
+      "schema": "my_schema",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {
+    "my_schema": "my_schema"
+  },
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
