@@ -1,0 +1,1 @@
+ALTER TABLE "dates2" RENAME COLUMN "id" TO "id2";

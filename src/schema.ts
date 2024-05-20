@@ -1,5 +1,7 @@
 
-import { serial, text, pgTable, time, integer } from "drizzle-orm/pg-core";
+import { serial, text, pgTable, integer, timestamp, time,  } from "drizzle-orm/pg-core";
+import { createInsertSchema } from 'drizzle-typebox';
+
 
 export const Users = pgTable('users', {
     id: serial('id').primaryKey(),
@@ -8,7 +10,14 @@ export const Users = pgTable('users', {
 
 export const Dates = pgTable('dates', {
     id: serial('id').primaryKey(),
-    arrival: time('arrival').notNull(),
-    departure: time('departure').notNull(),
+    arrival: timestamp("arrival", {
+        mode: "date"
+    }).notNull(),
+    departure: timestamp('departure', {
+        mode: "date"
+    }).notNull(),
     userId: integer('user_id').references(()=> Users.id).notNull()
 })
+
+// Schema for inserting a user - can be used to validate API requests
+export const insertDateSchema = createInsertSchema(Dates);

@@ -10,7 +10,9 @@
     "@neondatabase/serverless": "^0.9.3",
     "drizzle-kit": "^0.21.2",
     "drizzle-orm": "^0.30.10",
-    "elysia": "latest"
+    "drizzle-typebox": "^0.1.1",
+    "elysia": "latest",
+    "logestic": "^1.1.1"
   },
   "devDependencies": {
     "bun-types": "latest"

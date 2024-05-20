@@ -1,8 +1,13 @@
 CREATE TABLE IF NOT EXISTS "dates" (
 	"id" serial PRIMARY KEY NOT NULL,
-	"arrival" time,
-	"departure" time,
-	"user_id" integer
+	"arrival" timestamp NOT NULL,
+	"departure" timestamp NOT NULL,
+	"user_id" integer NOT NULL
+);
+--> statement-breakpoint
+CREATE TABLE IF NOT EXISTS "users" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"name" text NOT NULL
 );
 --> statement-breakpoint
 DO $$ BEGIN

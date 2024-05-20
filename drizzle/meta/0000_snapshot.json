@@ -1,12 +1,60 @@
 {
-  "id": "ece18716-6ead-4207-9d54-137c66969f67",
+  "id": "9c56a72e-5ca4-4eae-9a76-8c8ff227e365",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "6",
   "dialect": "postgresql",
   "tables": {
-    "my_schema.users": {
+    "public.dates": {
+      "name": "dates",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "arrival": {
+          "name": "arrival",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "departure": {
+          "name": "departure",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "dates_user_id_users_id_fk": {
+          "name": "dates_user_id_users_id_fk",
+          "tableFrom": "dates",
+          "tableTo": "users",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.users": {
       "name": "users",
-      "schema": "my_schema",
+      "schema": "",
       "columns": {
         "id": {
           "name": "id",
@@ -18,7 +66,7 @@
           "name": "name",
           "type": "text",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         }
       },
       "indexes": {},
@@ -28,9 +76,7 @@
     }
   },
   "enums": {},
-  "schemas": {
-    "my_schema": "my_schema"
-  },
+  "schemas": {},
   "_meta": {
     "columns": {},
     "schemas": {},

@@ -1,11 +1,59 @@
 {
-  "id": "ea1d7ba0-e15a-48cc-86c2-905e96914559",
-  "prevId": "d5ee84e2-ef7d-4bab-b9ab-9e31a1242fbd",
+  "id": "8c2cf1a1-4106-4c6e-b8aa-0f4966bd7ca0",
+  "prevId": "5252826e-0c0d-4f18-ae00-a8286bf1398a",
   "version": "6",
   "dialect": "postgresql",
   "tables": {
-    "public.users": {
-      "name": "users",
+    "public.dates2": {
+      "name": "dates2",
+      "schema": "",
+      "columns": {
+        "id2": {
+          "name": "id2",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "arrival": {
+          "name": "arrival",
+          "type": "time",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "departure": {
+          "name": "departure",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "dates2_user_id_users2_id_fk": {
+          "name": "dates2_user_id_users2_id_fk",
+          "tableFrom": "dates2",
+          "tableTo": "users2",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.users2": {
+      "name": "users2",
       "schema": "",
       "columns": {
         "id": {
@@ -18,7 +66,7 @@
           "name": "name",
           "type": "text",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         }
       },
       "indexes": {},

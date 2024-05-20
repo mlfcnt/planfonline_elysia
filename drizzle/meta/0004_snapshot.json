@@ -1,15 +1,15 @@
 {
-  "id": "5252826e-0c0d-4f18-ae00-a8286bf1398a",
-  "prevId": "7cb29272-ec73-49e8-bb53-b1199fedb363",
+  "id": "d3ef546c-07c6-4665-b818-1e5b30e71876",
+  "prevId": "8c2cf1a1-4106-4c6e-b8aa-0f4966bd7ca0",
   "version": "6",
   "dialect": "postgresql",
   "tables": {
-    "public.dates2": {
-      "name": "dates2",
+    "public.dates": {
+      "name": "dates",
       "schema": "",
       "columns": {
-        "id2": {
-          "name": "id2",
+        "id": {
+          "name": "id",
           "type": "serial",
           "primaryKey": true,
           "notNull": true
@@ -35,10 +35,10 @@
       },
       "indexes": {},
       "foreignKeys": {
-        "dates2_user_id_users2_id_fk": {
-          "name": "dates2_user_id_users2_id_fk",
-          "tableFrom": "dates2",
-          "tableTo": "users2",
+        "dates_user_id_users_id_fk": {
+          "name": "dates_user_id_users_id_fk",
+          "tableFrom": "dates",
+          "tableTo": "users",
           "columnsFrom": [
             "user_id"
           ],
@@ -52,8 +52,8 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
-    "public.users2": {
-      "name": "users2",
+    "public.users": {
+      "name": "users",
       "schema": "",
       "columns": {
         "id": {

@@ -8,17 +8,11 @@ export function initializeRoutes(app: Elysia) {
       hello: "world",
     }))
     .get("/users", async () => db.select().from(Users))
-    .post("/dates", async ({ body }) => 
-      db.insert(Dates).values({
-        arrival: body.arrival,
-        departure: body.departure,
-        userId: body.userId,
-      }), {
-        body: t.Object({
-          arrival: t.Any(),
-          departure: t.Any(),
-          userId: t.Any()
-        })
-      }
-    );
+    .post("/dates", async ({ body }) => db.insert(Dates).values(body), {
+      body: t.Object({
+        arrival: t.Date(),
+        departure: t.Date(),
+        userId: t.Integer(),
+      }),
+    });
 }
