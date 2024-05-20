@@ -15,6 +15,13 @@
       "when": 1716139444267,
       "tag": "0001_cheerful_darkhawk",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1716221962101,
+      "tag": "0002_amused_silhouette",
+      "breakpoints": true
     }
   ]
 }
