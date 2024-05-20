@@ -15,7 +15,7 @@ export const db = drizzle(sql, {
 });
 
 const app = new Elysia().use(cors()).use(Logestic.preset("fancy"));
-const routes = initializeRoutes(app);
+const routes = initializeRoutes(app as unknown as Elysia);
 app.use(routes);
 app.listen(8080);
 
