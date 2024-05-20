@@ -15,6 +15,20 @@
       "when": 1716139444267,
       "tag": "0001_cheerful_darkhawk",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1716219786256,
+      "tag": "0002_large_saracen",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1716220033221,
+      "tag": "0003_wandering_bedlam",
+      "breakpoints": true
     }
   ]
 }
